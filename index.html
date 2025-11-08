@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <script>
-    (function() {
-      const path = window.location.pathname.replace(/^\/+/, "");
-      if (path) {
-        window.location.href = "https://t.me/CodeSubs/" + encodeURIComponent(path);
-      }
-    })();
-  </script>
+    <script>
+      (function() {
+        const path = window.location.pathname.replace(/^\/|\/$/g, "");
+        if (path) {
+          window.location.href = "https://t.me/CodeSubs/" + encodeURIComponent(path);
+        } else {
+          window.location.href = "https://t.me/CodeSubs";
+        }
+      })();
+    </script>
 </head>
 </html>
